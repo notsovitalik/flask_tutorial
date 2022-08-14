@@ -12,12 +12,13 @@ services:
             - POSTGRES_DB=postgres
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
-    erp:
+    web:
         build: .
-        container_name: erp
+        container_name: web
+        restart: on-failure
         volumes:
             - .:/usr/src/app
-        command: python erp/runserver.py
+        command: python backend/runserver.py
         ports:
             - "8000:8000"
         depends_on:
