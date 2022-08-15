@@ -1,5 +1,5 @@
 from home.home import app as home_app
-from second.second import app as second_app
+from login.login import app as login_app
 from flask import Flask
 import os
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
@@ -10,7 +10,7 @@ application = Flask(__name__)
 # define all our apps and 
 application.wsgi_app = DispatcherMiddleware(None, {
     '/home': home_app,
-    '/second': second_app,
+    '/login': login_app,
 })
 
 if __name__ == '__main__':

@@ -5,3 +5,4 @@ Jinja2==3.1.2
 MarkupSafe==2.1.1
 Werkzeug==2.2.2
 sqlalchemy==1.4.40
+flask-wtf
