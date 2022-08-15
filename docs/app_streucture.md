@@ -5,6 +5,7 @@ STRUCTURE:
 - web: contains 
     - flask
         - home: home page with links
+        - database: list of all tables, views, triggers, functions etc, that can be listed, and tables and views can be viewed, filtered and editing data
         - modules: page with functions
             - add client
             - add item
