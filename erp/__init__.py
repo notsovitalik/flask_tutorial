@@ -25,14 +25,15 @@ def create_app(config_class = Config):
     login_manager.init_app(app)
     mail.init_app(app)
 
-    # dont understand why there is import after all...
     from erp.users.routes import users
     from erp.main.routes import main
     from erp.posts.routes import posts
+    from erp.errors.handlers import errors
 
     app.register_blueprint(users)
     app.register_blueprint(main)
     app.register_blueprint(posts) 
+    app.register_blueprint(errors)
 
     return app
 
